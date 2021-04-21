@@ -89,7 +89,7 @@ console.log(this.state.employees)
         return (
             <div>
                 <Search handleSearchChange={this.handleSearchChange} />
-                {this.state.loaded ? <Table results = {this.state.filteredEmployees} sortEmployeebyEmail = {this.sortEmployeebyEmail} sortEmployeebyFirstName = { this.sortEmployeebyFirstName} sortEmployeebyLastName = {this.sortEmployeebyLastName} sortEmployeebyCity = {this.sortEmployeebyCity} sortEmployeebyCountry = {this.sortEmployeebyCountry} /> : <h4>Loading...</h4>}
+                {this.state.loaded ? <Table results = {this.state.filteredEmployees} sortEmployeebyEmail = {this.sortEmployeebyEmail} sortEmployeebyFirstName = { this.sortEmployeebyFirstName} sortEmployeebyLastName = {this.sortEmployeebyLastName} sortEmployeebyCity = {this.sortEmployeebyCity} sortEmployeebyCountry = {this.sortEmployeebyCountry} sortEmployeebyState = {this.sortEmployeebyState}/> : <h4>Loading...</h4>}
                 
             </div>
         )
