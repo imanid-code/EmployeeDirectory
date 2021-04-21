@@ -1,6 +1,7 @@
 # React Employee Directory
+
    ![preview](public/assets/img/preview.png) 
-   
+
 ## Description
 
 ---
