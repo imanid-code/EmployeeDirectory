@@ -24,9 +24,13 @@ export default class User extends Component {
         const search = event.target.value;
         //single employee just one piece of employees 
         const filtered =  this.state.employees.filter(employee => {
-
-            let names = Object.values(employee).join('').toLowerCase();
-          
+            const object = {
+                name: `${employee.name.first} ${employee.name.last}`,
+                location: `${employee.location.city} ${employee.location.state} ${employee.location.country} `,
+                email: employee.email
+             }
+            let names = Object.values(object).join('').toLowerCase();
+          console.log(names)
             return(
                 names.indexOf(search.toLowerCase()) !== -1
                
@@ -88,7 +92,9 @@ export default class User extends Component {
 console.log(this.state.employees)
         return (
             <div>
+                
                 <Search handleSearchChange={this.handleSearchChange} />
+                
                 {this.state.loaded ? <Table results = {this.state.filteredEmployees} sortEmployeebyEmail = {this.sortEmployeebyEmail} sortEmployeebyFirstName = { this.sortEmployeebyFirstName} sortEmployeebyLastName = {this.sortEmployeebyLastName} sortEmployeebyCity = {this.sortEmployeebyCity} sortEmployeebyCountry = {this.sortEmployeebyCountry} sortEmployeebyState = {this.sortEmployeebyState}/> : <h4>Loading...</h4>}
                 
             </div>
